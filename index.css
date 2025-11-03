@@ -1,0 +1,106 @@
+<style type="text/css">
+/* Base styles */
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: Courier, monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1F1F1F;
+  background-color: #BDBEBE;
+}
+h1, h2 {
+  font-family: Courier, monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  position: relative;
+  left: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  border: 2px solid #000;
+  padding: 0 15px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  color: #1F1F1F !important;
+  background-color: #BDBEBE !important;
+}
+
+p,
+h2,
+ul,
+summary {
+  line-height: 1.5;
+  -webkit-transform: translateZ(100px);
+  transform: translateZ(100px);
+}
+
+.unreleased {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+/* Animation */
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: translate3d(0, 0, 100px);
+    transform: translate3d(0, 0, 100px);
+  }
+  100% {
+    -webkit-transform: translate3d(15px, 0, 100px);
+    transform: translate3d(15px, 0, 100px);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: translate3d(0, 0, 100px);
+    -ms-transform: translate3d(0, 0, 100px);
+    transform: translate3d(0, 0, 100px);
+  }
+  100% {
+    -webkit-transform: translate3d(15px, 0, 100px);
+    transform: translate3d(15px, 0, 100px);
+  }
+}
+
+.swing {
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Responsive layout */
+@media only screen and (min-width: 45em) {
+  body {
+    padding-bottom: 10em;
+  }
+  main {
+    width: 550px;
+    position: absolute;
+    top: 5em;
+    left: 25%;
+  }
+}
+</style>
