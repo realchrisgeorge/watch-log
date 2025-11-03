@@ -1478,20 +1478,8 @@
         i'm also <a target="_blank" href="https://www.esmailcorp.com/">here</a>
     </p>
 </main>
+	
 <script>var t=document.getElementsByTagName('main')[0];document.documentElement.onmousemove=function(e){t.style.webkitTransform=t.style.transform='rotate3d(10, 180, -6, '+e.pageX/-20+'deg)';};</script>
-<script>
-  const list = document.getElementById("movieList");
-  const items = Array.from(list.querySelectorAll("li"));
-
-  items.sort((a, b) => {
-    const dateA = a.textContent.match(/\d{2}\.\d{2}\.\d{4}/)[0].split('.').reverse().join('');
-    const dateB = b.textContent.match(/\d{2}\.\d{2}\.\d{4}/)[0].split('.').reverse().join('');
-    return dateB.localeCompare(dateA); // Newest first
-  });
-
-  list.innerHTML = "";
-  list.setAttribute("reversed", "");
-  items.forEach(item => list.appendChild(item));
-</script>
+	
 </body>
 </html>
