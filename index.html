@@ -70,9 +70,9 @@
 
 <details style="cursor:pointer">
   <summary>
-    <h2 style="display:inline;"><strong>Movies</strong></h2>
+    <h2 style="display:inline;"><strong>Movies</strong><span id="movie-count"></span></h2>
   </summary>
-<ol reversed>
+<ul id="movie-list">
   <li><strong>31.10.2025</strong> – <strong>The Master</strong> (2012)</li>
   <li><strong>31.10.2025</strong> – <strong>The Wizard of Lies</strong> (2017)</li>
   <li><strong>27.10.2025</strong> – <strong>Ghost Dog: The Way of the Samurai</strong> (1999)</li>
@@ -1440,7 +1440,7 @@
   <li><strong>26.07.2022</strong> – <strong>Fight Club</strong> (1999)</li>
   <li><strong>26.07.2022</strong> – <strong>The Batman</strong> (2022)</li>
   <li><strong>26.07.2022</strong> – <strong>Doctor Strange in the Multiverse of Madness</strong> (2022)</li>
-</ol>
+</ul>
 </details>
 
 <details style="cursor:pointer">
@@ -1483,6 +1483,11 @@
     </p>
 </main>
 <script>var t=document.getElementsByTagName('main')[0];document.documentElement.onmousemove=function(e){t.style.webkitTransform=t.style.transform='rotate3d(10, 180, -6, '+e.pageX/-20+'deg)';};</script>
+<script>
+  const list = document.querySelector('#movie-list');
+  const count = list.querySelectorAll('li').length;
+  document.querySelector('#movie-count').textContent = `(${count})`;
+</script>
 </body>
 </html>
 
